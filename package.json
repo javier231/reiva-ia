@@ -1,0 +1,18 @@
+{
+  "name": "reiva-ia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Asistente personal REIVA IA instalable como PWA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-rate-limit": "^7.5.0"
+  }
+}
