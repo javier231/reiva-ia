@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080d1c">
+  <meta name="description" content="REIVA IA, tu asistente inteligente personal.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>REIVA IA</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/icon-192.png" alt="Logo REIVA IA" class="logo">
+        <div><div class="brand-name">REIVA <span>IA</span></div><div class="brand-sub">Tu inteligencia artificial personal</div></div>
+      </div>
+      <button id="newChat" class="icon-btn" aria-label="Nueva conversación" title="Nueva conversación">＋</button>
+    </header>
+
+    <section id="login" class="login hidden">
+      <div class="login-card">
+        <img src="/icon-192.png" class="login-logo" alt="">
+        <h1>Bienvenido a REIVA IA</h1>
+        <p>Ingresa tu contraseña personal para continuar.</p>
+        <form id="loginForm">
+          <input id="password" type="password" placeholder="Contraseña de acceso" autocomplete="current-password" required>
+          <button class="primary" type="submit">Entrar</button>
+          <p id="loginError" class="error"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="chat" class="chat">
+      <div id="welcome" class="welcome">
+        <div class="orb"><img src="/icon-192.png" alt="REIVA IA"></div>
+        <h1>Hola, soy <span>REIVA IA</span></h1>
+        <p>Pregúntame lo que quieras. Estoy aquí para ayudarte.</p>
+        <div class="suggestions">
+          <button class="suggestion">Explícame algo difícil de forma sencilla</button>
+          <button class="suggestion">Ayúdame a redactar un mensaje profesional</button>
+          <button class="suggestion">Analiza una foto o documento</button>
+          <button class="suggestion">Investiga un tema en Internet</button>
+        </div>
+      </div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <form id="composer" class="composer">
+      <div id="preview" class="preview hidden"></div>
+      <div class="input-row">
+        <label class="attach" for="imageInput" title="Adjuntar imagen">＋</label>
+        <input id="imageInput" type="file" accept="image/*" hidden>
+        <textarea id="prompt" rows="1" placeholder="Escribe tu pregunta..." maxlength="12000"></textarea>
+        <button id="send" class="send" type="submit" aria-label="Enviar">↑</button>
+      </div>
+      <div class="fineprint">REIVA IA puede cometer errores. Verifica la información importante.</div>
+    </form>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
